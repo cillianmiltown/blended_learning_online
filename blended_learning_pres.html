@@ -11,7 +11,7 @@
 <script src="blended_learning_pres_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="blended_learning_pres_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="blended_learning_pres_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="Dr Cillian McHugh">
   <title>PS4033 Case Study</title>
@@ -458,7 +458,7 @@ Dr Cillian McHugh
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="resources/images/blooms-taxonomy-verbs-feat.png.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Click image for full-size (retrieved from Fractus Learning)"><img data-src="resources/images/blooms-taxonomy-verbs-feat.png.webp" title="Bloom's Taxonomy" alt="Click image for full-size (retrieved from Fractus Learning)"></a></p>
+<p><a href="resources/images/blooms-taxonomy-verbs-feat.png.webp" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Click image for full-size (retrieved from Fractus Learning)"><img data-src="resources/images/blooms-taxonomy-verbs-feat.png.webp" title="Bloom's Taxonomy" alt="Click image for full-size (retrieved from Fractus Learning)"></a></p>
 <figcaption>Click image for full-size (<a href="https://www.fractuslearning.com/blooms-taxonomy-verbs-free-chart/">retrieved from Fractus Learning</a>)</figcaption>
 </figure>
 </div>
@@ -509,13 +509,13 @@ Dr Cillian McHugh
 </div><div class="column" style="width:35%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="resources/images/covid_19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="retrieved from Air Force Medical Service"><img data-src="resources/images/covid_19.png" alt="retrieved from Air Force Medical Service"></a></p>
+<p><a href="resources/images/covid_19.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="retrieved from Air Force Medical Service"><img data-src="resources/images/covid_19.png" alt="retrieved from Air Force Medical Service"></a></p>
 <figcaption>retrieved from <a href="https://www.airforcemedicine.af.mil/COVID-19/">Air Force Medical Service</a></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="resources/images/housing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="retrieved from iCommunity"><img data-src="resources/images/housing.png" alt="retrieved from iCommunity"></a></p>
+<p><a href="resources/images/housing.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="retrieved from iCommunity"><img data-src="resources/images/housing.png" alt="retrieved from iCommunity"></a></p>
 <figcaption>retrieved from <a href="https://www.icommunityhub.org/the-student-accommodation-crisis-in-ireland-the-potential-of-community-led-student-housing/">iCommunity</a></figcaption>
 </figure>
 </div>
@@ -531,7 +531,7 @@ Dr Cillian McHugh
 <div class="column" style="width:15%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="resources/images/prereg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="credit COS"><img data-src="resources/images/prereg.png" alt="credit COS"></a></p>
+<p><a href="resources/images/prereg.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="credit COS"><img data-src="resources/images/prereg.png" alt="credit COS"></a></p>
 <figcaption>credit <a href="https://www.cos.io/initiatives/badges">COS</a></figcaption>
 </figure>
 </div>
@@ -1110,80 +1110,42 @@ Van Wig, A., Yang, S., Bahlmann Bollinger, C., Chen, X., Karkar-Esperat, T., Pol
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1480,7 +1442,7 @@ Van Wig, A., Yang, S., Bahlmann Bollinger, C., Chen, X., Karkar-Esperat, T., Pol
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
