@@ -1,0 +1,898 @@
+---
+title: "PS4033 Case Study"
+subtitle: "Blended Learning in PS4033: Research Methods in Psychology"
+author: "Dr Cillian McHugh"
+institute: "Department of Psychology"
+date: 2024-04-22
+date-format: full
+bibliography: "resources/bib/My Library.bib"
+csl: apa.csl
+format: 
+  revealjs:
+    navigation-mode: vertical
+    slide-level: 3
+    slide-number: true
+    controls: true
+    transition: slide
+    logo: "resources/images/ul-psychology-logos.png"
+    footer: "[Title](#title-slide) - [Navigation](#navigating-this-presentation) - [Intro](#sec-introduction) - [Background](#sec-background) - [Design](#sec-design) - [Implementation](#sec-implementation) - [Evaluation](#sec-evaluation) - [Reflection](#sec-reflection)"
+    theme: "resources/css/mytheme.scss"
+    footnotes-hover: true
+    preview-links: false
+    crossrefs-hover: true
+    chalkboard: 
+      buttons: true
+editor: source
+editor_options: 
+  chunk_output_type: console
+---
+
+## Navigating this Presentation{.scrollable .smaller}
+
+
+```{r}
+#| include: false
+
+library(ggplot2)
+library(scales)
+
+# https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+```
+
+```{css, echo=FALSE}
+.scrollable {
+  overflow-y: auto;
+  height: 100%;
+}
+```
+
+
+- You can scroll through the sections of this presentation as you would any powerpoint presentation (e.g., `Space Bar`, `Right/Left Arrow`, or clicking the green arrows)
+
+- Each section can be located by clicking on the relevant section in the footer:
+
+![](resources/images/navigating/Slide4.png "navigation"){height="400"}
+
+
+- Additionally you can navigate to different sections by clicking the hamburger menu on the bottom left corner
+
+
+![](resources/images/navigating/Slide3.png "navigation"){height="400"}
+
+- This will bring up a side-bar menu to navigate to each section
+
+
+![](resources/images/navigating/Slide5.png "navigation"){height="400"}
+
+Additionally, clicking `Esc` will expand the view to all sections
+
+
+## Introduction{#sec-introduction .scrollable .smaller}
+
+This case study presents the technology enhanced learning approach for PS4033 Research Methods in Psychology. It will present the approach as well as an evaluation of and reflection on the approach.
+
+
+Overview
+
+
+- **[Introduction](#sec-introduction)**: Setting the context
+- **[Background](#sec-background)**: Background to the module
+- **[Design](#sec-design)**: The approach to blended/technology enhanced learning
+- **[Implementation](#sec-implementation)**: Implementation of blended/technology enhanced learning
+- **[Evaluation](#sec-evaluation)**: Evaluating the performance of the approach
+- **[Reflection](#sec-reflection)**: Reflecting on the experience
+- **[References](#sec-references)**: Literature cited
+
+
+## Background{#sec-background .scrollable .smaller}
+
+
+:::: {.columns}
+
+::: {.column width="80%"}
+This is a co-taught Spring Semester module that teaches two cohorts of undergraduate students (2nd year BSc students & 3rd year BA students), and one cohort of MA students research methods in Psychology (the MA group have a different module code PS6112, and a separate VLE. This Case Study focuses on PS4033 only). It covers topics relating to research design, operationalisation of variables, validity and reliability of measures, and data analysis. For the undergraduates, it is the final research methods module before their final year and they begin their final year project.
+:::
+
+::: {.column width="20%"}
+![Cillian McHugh: Module Leader](resources/images/cillian_face_2022d.jpg "cillian"){height="200"}\
+
+
+Cillian McHugh: Module Leader
+
+<a href="https://orcid.org/0000-0002-9701-3232">
+<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_24x24.png" width="24" height="24" /></a>  &nbsp; [Google](https://scholar.google.com/citations?hl=en&user=OInfWlkAAAAJ)
+
+:::
+
+::::
+
+The core texts for the module are: @field_discovering_2005, @howitt_introduction_2007a, @howitt_introduction_2007
+
+![](resources/images/navigating/Slide11.png "texts"){height="400"}
+
+The learning outcomes for this module are under revision. The published learning outcomes are not measurable, and are too general. The current learning outcomes and the proposed revised learning outcomes are displayed below:
+
+|Current Learning Outcomes |Proposed Learning Outcomes |
+|---|---|
+|*Cognitive (Knowledge, Understanding, Application, Analysis, Evaluation, Synthesis)* <br> Knowledge of the academic discipline of psychology through in-depth interrogation of the concepts and principles of the variety of paradigms and epistemologies across psychological research. <br> Familiarity with the laboratory report and the requirements of scientific report writing.| *Cognitive (Knowledge, Understanding, Application, Analysis, Evaluation, Synthesis)* <br> By the end of this module students should be able to: <br> 1.	*Describe* core concepts relating to the academic discipline of psychology. <br> 2.	*Evaluate* the concepts and principles of a variety of paradigms and epistemologies across psychological research  <br> 3.	*Demonstrate* competence in research design, analysis, and laboratory report/scientific writing|
+|  *Affective (Attitudes and Values)* <br> An appreciation of the role of ethical research in psychology and the development of knowledge more generally.  | *Affective (Attitudes and Values)* <br> By the end of this module students should <br> 4. *Display* an appreciation of the role of ethical research in psychology and the development of knowledge more generally |
+|*Psychomotor (Physical Skills)* <br> Data coding and analysis in SPSS Ability to undertake advanced bivariate inferential statistics, assess psychometric properties of tests. Ability to formulate and conduct a research project. | *Psychomotor (Physical Skills)* <br> By the end of this module students should be able to: <br> 5.	*Demonstrate* competence in data coding and analysis using appropriate software (e.g., SPSS, R), undertaking advanced bivariate inferential statistics, assessing psychometric properties of tests, and formulating and conducting a research project|
+
+<br>
+
+The revised learning outcomes now all begin with an action verb, placing a stronger focus on the learner [@adam_introduction_2006] and a greater emphasis on how students will demonstrate their learning [in line with @donnelly_designing_2005; @adam_introduction_2006]. The revised learning outcomes do not make significant changes to the core competencies that were named in the originally proposed learning outcomes, i.e, the content covered in the module and the expected knowledge and skill acquisition remains largely unchanged, the revised outcomes allow for more measurable assessment of this knowledge and skills.
+
+
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+The proposed learning outcomes span a range of levels of Bloom’s taxonomy of learning objectives [@bloom_taxonomy_1956; @adam_introduction_2006], in both the cognitive and affective domains [@bloom_taxonomy_1956; @hadjianastasis_learning_2017-1], as well as the psychomotor domain [@university_of_limerick_writing_2008].
+
+:::
+
+::: {.column width="30%"}
+
+
+![Click image for full-size ([retrieved from Fractus Learning](https://www.fractuslearning.com/blooms-taxonomy-verbs-free-chart/))](resources/images/blooms-taxonomy-verbs-feat.png.webp "Bloom's Taxonomy"){.lightbox}
+
+```{r include=FALSE}
+
+# [![Click image for full-size](resources/images/blooms-taxonomy-verbs-feat.png.webp "Bloom's Taxonomy"){.no-lightbox}](#blooms-taxonomy-click-here-to-return)
+
+# ([retrieved from Fractus Learning](https://www.fractuslearning.com/blooms-taxonomy-verbs-free-chart/))
+
+```
+
+:::
+
+::::
+
+
+<font color=#005335>**Delivery**</font color>
+
+- Delivery of this module is a combination of:
+  - face-to-face lectures (also recorded and uploaded online)
+  - labs completed in during scheduled lab slots and during own time 
+
+
+<font color=#005335>**Assessment**</font color>
+
+- A **24-hour exam** (50%): Administered and submitted through Brightspace in week 12
+- **Research Project** (in 2 parts, 45% total)
+  - *Part 1: Pre-registration* (5%): Due Wednesday 20th March
+    - Feedback provided on pre-registration the week of 1st April
+  - *Part 2: Full Report* (40%): Due Wednesday 8th May
+- **At Home Labs** (5%)
+- "In Person" labs: not graded, but all must be submitted to pass the module
+
+
+
+
+
+<br><br>
+
+### Bloom's Taxonomy [(Click here to return)](#sec-background) {.scrollable}
+
+![](resources/images/blooms-taxonomy-verbs-feat.png.webp "Bloom's Taxonomy"){height="100%"}
+
+
+
+## Design{#sec-design  .scrollable .smaller}
+
+- The learning outcomes, the size of the class (>125 across all cohorts), and the overall structure of the module requires a strong blended approach. The delivery of the module is fully blended.
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+
+- In addition to these learning and delivery considerations, two key considerations underpinning the blended approach are:
+  - The on-going COVID-19 pandemic. I continue to teach in a mask, some students may be high risk, and may prefer to avoid coming on campus or attending in-person lectures
+  - The on-going accommodation crisis, some students may not be living near Limerick, and if they don't have to be on campus for class this may save them the time/stress of the commute.
+
+
+:::
+
+::: {.column width="35%"}
+
+![retrieved from [Air Force Medical Service](https://www.airforcemedicine.af.mil/COVID-19/)](resources/images/covid_19.png){.lightbox}
+
+![retrieved from [iCommunity](https://www.icommunityhub.org/the-student-accommodation-crisis-in-ireland-the-potential-of-community-led-student-housing/) ](resources/images/housing.png){.lightbox}
+
+
+:::
+
+::::
+
+- I deliver in-person lectures, and these are recorded and uploaded to Brightspace afterwards.
+- The "attendance" requirement for the labs is now assessed using the *submission* of the lab worksheets (as opposed to physical attendance at the lab).
+- The 24 hour exam format also facilitates the overall blended approach to the module
+
+<br>
+<font color=#005335>**Pre-Registration Activity**</font color>
+
+
+
+:::: {.columns}
+
+::: {.column width="15%"}
+
+
+![credit [COS](https://www.cos.io/initiatives/badges)](resources/images/prereg.png){.lightbox}
+
+:::
+
+::: {.column width="85%"}
+
+
+- A key major change introduced into the module this year is the introduction of a pre-registration activity.
+- Students provide an overview of their planned research *before* carrying out the research. They receive feedback on this before they conduct the research, and complete the main report.
+
+
+:::
+
+::::
+
+- The benefit of this activity is two fold:
+  1. It reflects recent developments in methods in psychology; pre-registration is an increasingly adopted practice within psychological research, and it is increasingly becoming part of the publishing process. This activity gives students hands-on experience in working in-line with these developments.
+  2. It provides an opportunity for a low-stakes piece of written work that students will receive feed-forward feedback, that can be integrated into their final report [@boud_Feedback_2013; @brinko_Practice_1993]
+- This is also applies the principle of learning-oriented assessment [@carless_learningoriented_2007], in line with the view that "assessment, rather than teaching, shapes the experience of learning" [@mclean_this_2018; see also @ramsden_learning_1991; @bloxham_developing_2007]. 
+
+<br>
+
+## Implementation{#sec-implementation .scrollable .smaller}
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+- In designing the Brightspace VLE, a key focus was simplicity and ease of navigation [@vanwig_Simplicity_2022]. 
+- I created six separate parent tabs for each of *Module Overview*, *Lectures*, *Labs*, *At Home Labs*, *Assignment*, and *Exam* (right).
+- This minimalist easy to navigate environment is accessible by clicking on the "Content" menu. This was flagged to students in the first lecture (below).
+
+:::
+
+::: {.column width="35%"}
+
+[![Click image for full-size](resources/images/module_content.png "Module Content"){height="250"}](#content-layout-click-here-to-return)
+
+:::
+
+::::
+
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+[![Click image for full-size](resources/images/slide_for_students.png "Slide For Students")](#slide-for-students-click-here-to-return)
+
+:::
+
+::: {.column width="65%"}
+
+
+- Materials only became available as required, with the VLE becoming more populated week-on-week. This ensured that students weren't overwhelmed with content
+- Within each tab the full materials for each topic are included - and organised by week where necessary (below).
+
+:::
+
+
+::::
+
+
+
+:::: {.columns}
+
+
+
+::: {.column width="65%"}
+
+- After each lecture, the video recording of the lecture was embedded onto the landing page for that week (right). All recordings are made in Panopto with captioning enabled to maximise accessibility.
+- The slides were uploaded the night before the lecture took place
+- Any additional material (e.g., activities, key readings) were also uploaded within the tab for that particular week
+
+:::
+
+
+::: {.column width="35%"}
+
+[![Click image for full-size](resources/images/tree_tabs.png "Expanded Lecture Tab")](#expanded-lecture-tab-click-here-to-return)
+
+:::
+
+::::
+
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+[![Click image for full-size](resources/images/labs.png "Labs Tab")](#labs-tab-click-here-to-return){height="30%"}
+
+:::
+
+::: {.column width="65%"}
+
+
+- Each of the labs (left) and at-home labs included:
+  - an instructional video, describing how to do the relevant procedure (with screen capture, and recorded in Panopto with captions enabled, maximising accessibility)
+  - an activity sheet
+  - a data file (or multiple data files)
+  - a submission link
+
+
+:::
+
+
+::::
+
+
+
+
+
+<video width="600" height="400" src="https://d2hpwsdp0ihr0w.cloudfront.net/sessions/3f7b12f3-2f29-4891-8690-b10a00cf2f5e/6313e0dc-ebc0-4b57-846b-b10a00cf2f67-2907e3a6-15e8-46ff-836a-b10a00d17ffe.mp4?invocationId=bf425844-e106-ef11-82af-023c18b7dbd3" controls></video>
+
+### Content Layout [(Click here to return)](#sec-implementation) {.scrollable}
+
+![](resources/images/module_content.png "Module Content"){height="100%"}
+
+<br>
+
+
+
+### Slide For Students [(Click here to return)](#sec-implementation) {.scrollable}
+
+![](resources/images/slide_for_students.png "Slide For Students"){height="100%"}
+
+<br>
+
+
+### Expanded Lecture Tab [(Click here to return)](#sec-implementation) {.scrollable}
+
+
+![](resources/images/tree_tabs.png "Expanded Lecture Tab"){height="100%"}
+
+<br><br>
+
+
+### Labs Tab [(Click here to return)](#sec-implementation) {.scrollable}
+
+
+![](resources/images/labs.png "Labs Tab"){height="100%"}
+
+<br><br>
+
+
+
+## Evaluation{#sec-evaluation .smaller .scrollable}
+
+
+
+
+- Overall engagement was good   
+- More evaluation...
+
+
+
+```{r}
+#| echo: false
+#| include: false
+#| code-fold: 'show'
+#| code-summary: "Show the code"
+
+df <- read.csv("PS4033 - RESEARCH METHODS 20234 SEM2_StatisticsExport_2024-04-22T110444.csv")
+
+discussion <- read.csv("ExportedData_2024-04-22T122347.csv")
+
+
+df$percentage <- 
+  df$UsersVisited/97
+
+mean(df$percentage,na.rm = T)
+
+table(df$Module)
+
+
+
+at_home_lab_1 <- df[which(df$Module == "At Home Lab 1"),]
+at_home_lab_2 <- df[which(df$Module == "At Home Lab 2"),]
+at_home_lab_3 <- df[which(df$Module == "At Home Lab 3"),]
+at_home_lab_4 <- df[which(df$Module == "At Home Lab 4"),]
+at_home_lab_5 <- df[which(df$Module == "At Home Lab 5"),]
+at_home_lab_6 <- df[which(df$Module == "At Home Lab 6"),]
+at_home_lab_7 <- df[which(df$Module == "At Home Lab 7"),]
+at_home_lab_8 <- df[which(df$Module == "At Home Lab 8"),]
+
+
+lab_1 <- df[which(df$Module == "Lab 1"),]
+lab_2 <- df[which(df$Module == "Lab 2"),]
+lab_3 <- df[which(df$Module == "Lab 3"),]
+lab_4 <- df[which(df$Module == "Lab 4"),]
+lab_5 <- df[which(df$Module == "Lab 5"),]
+lab_6 <- df[which(df$Module == "Lab 6"),]
+lab_7 <- df[which(df$Module == "Lab 7"),]
+lab_8 <- df[which(df$Module == "Lab 8"),]
+
+
+
+mean(at_home_lab_1$percentage,na.rm = T)
+mean(at_home_lab_2$percentage,na.rm = T)
+mean(at_home_lab_3$percentage,na.rm = T)
+mean(at_home_lab_4$percentage,na.rm = T)
+mean(at_home_lab_5$percentage,na.rm = T)
+mean(at_home_lab_6$percentage,na.rm = T)
+mean(at_home_lab_7$percentage,na.rm = T)
+mean(at_home_lab_8$percentage,na.rm = T)
+
+
+
+
+mean(lab_1$percentage,na.rm = T)
+mean(lab_2$percentage,na.rm = T)
+mean(lab_3$percentage,na.rm = T)
+mean(lab_4$percentage,na.rm = T)
+mean(lab_5$percentage,na.rm = T)
+mean(lab_6$percentage,na.rm = T)
+mean(lab_7$percentage,na.rm = T)
+mean(lab_8$percentage,na.rm = T)
+
+
+sum(discussion$X.Read..including.own..==0)/97
+
+table(discussion$X.Threads.)
+
+sum(discussion$X.Threads. !=0)
+sum(discussion$X.Threads. !=0)/97
+
+heading <- c(""
+  ,"Lab 1"
+  ,"Lab 2"
+  ,"Lab 3"
+  ,"Lab 4"
+  ,"Lab 5"
+  ,"Lab 6"
+  ,"Lab 7"
+  ,"Lab 8")
+
+in_person <- c(
+  "In Person Labs"
+  ,paste(round(mean(lab_1$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_2$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_3$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_4$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_5$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_6$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_7$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_8$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+)
+
+at_home <- c(
+  "At Home Labs"
+  ,paste(round(mean(at_home_lab_1$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_2$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_3$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_4$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_5$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_6$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_7$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_8$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+)
+
+stats <- rbind(heading,in_person,at_home)
+
+rownames(stats)<-NULL
+
+stats
+
+
+```
+
+
+
+
+
+::: panel-tabset
+### Lab Engagement: Plot
+
+
+```{r}
+#| include: false
+
+
+df_labs1 <- 
+  rbind(
+    lab_1
+    ,lab_2
+    ,lab_3
+    ,lab_4
+    ,lab_5
+    ,lab_6
+    ,lab_7
+    ,lab_8
+  )
+df_labs1$labtype <- rep("In Person Labs")
+
+
+df_labs2 <- 
+  rbind(
+    at_home_lab_1
+    ,at_home_lab_2
+    ,at_home_lab_3
+    ,at_home_lab_4
+    ,at_home_lab_5
+    ,at_home_lab_6
+    ,at_home_lab_7
+    ,at_home_lab_8
+  )
+df_labs2$labtype <- rep("At Home Labs")
+
+
+# df_labs <- 
+#   rbind(
+#     lab_1
+#     ,lab_2
+#     ,lab_3
+#     ,lab_4
+#     ,lab_5
+#     ,lab_6
+#     ,lab_7
+#     ,lab_8
+#     ,at_home_lab_1
+#     ,at_home_lab_2
+#     ,at_home_lab_3
+#     ,at_home_lab_4
+#     ,at_home_lab_5
+#     ,at_home_lab_6
+#     ,at_home_lab_7
+#     ,at_home_lab_8
+#   )
+
+
+
+
+
+df_labs <- rbind(df_labs1,df_labs2)
+
+
+
+
+heading1 <- c(
+  "Lab 1"
+  ,"Lab 2"
+  ,"Lab 3"
+  ,"Lab 4"
+  ,"Lab 5"
+  ,"Lab 6"
+  ,"Lab 7"
+  ,"Lab 8")
+
+in_person1 <- c(
+   mean(lab_1$percentage,na.rm = T)
+  ,mean(lab_2$percentage,na.rm = T)
+  ,mean(lab_3$percentage,na.rm = T)
+  ,mean(lab_4$percentage,na.rm = T)
+  ,mean(lab_5$percentage,na.rm = T)
+  ,mean(lab_6$percentage,na.rm = T)
+  ,mean(lab_7$percentage,na.rm = T)
+  ,mean(lab_8$percentage,na.rm = T)
+)
+
+at_home1 <- c(
+   mean(at_home_lab_1$percentage,na.rm = T)
+  ,mean(at_home_lab_2$percentage,na.rm = T)
+  ,mean(at_home_lab_3$percentage,na.rm = T)
+  ,mean(at_home_lab_4$percentage,na.rm = T)
+  ,mean(at_home_lab_5$percentage,na.rm = T)
+  ,mean(at_home_lab_6$percentage,na.rm = T)
+  ,mean(at_home_lab_7$percentage,na.rm = T)
+  ,mean(at_home_lab_8$percentage,na.rm = T)
+)
+
+
+labtype <- c(rep("1In Person",8),rep("2At Home",8))
+labnumber <- c(heading1,heading1)
+stats1 <- c(in_person1,at_home1)
+
+df_labs1 <- cbind.data.frame(labtype,labnumber,stats1)
+
+```
+
+
+```{r}
+#| label: fig-stats
+#| include: true
+#| fig-cap-location: "bottom"
+#| fig-cap: Lab Engagement Statistics
+
+
+ggplot(df_labs1, aes(labnumber, stats1, fill = factor(labtype,labels=c("In Person","At Home")
+                                                      ))) +
+  scale_y_continuous(limits = c(-.03,1),
+                     labels = percent_format()
+  )+
+  geom_col(position = "dodge")+
+  xlab("Lab Number") +
+  ylab("Percentage of Class Accessed Online")+
+  scale_fill_manual(values = c("#005335","#00B140"))+
+  #scale_x_discrete(labels=c("Beckon", "Wave")) +
+  #scale_fill_grey(start = .5, end = .8) +
+  labs(fill="Lab Type")+
+  theme_bw() +
+  theme(plot.title=element_text(#amily="Times",
+                                size=12
+                                ),
+        legend.text=element_text(#family="Times",
+                                 size=8
+                                 ),
+          legend.title=element_text(#family="Times",
+                                    size=10
+                                    ),
+          axis.text=element_text(#family="Times",
+                                 colour = "black",
+                                 size=10
+                                 ),
+          axis.ticks.x = element_blank(),
+          axis.title=element_text(#family="Times",
+                                  size=12
+                                  ),
+          strip.text=element_text(#family = "Times",
+                                  size = 12
+                                  ),
+          strip.background = element_rect(fill = "white"),
+          legend.position="right")
+
+```
+
+### Lab Engagement: Table
+
+
+```{r}
+#| label: tbl-stats
+#| include: true
+#| tbl-cap-location: "bottom"
+#| tbl-cap: Lab Engagement Statistics
+
+knitr::kable(stats)
+
+```
+
+Percentage of the class that has engaged with the online content for each of the In Person Labs and At Home Labs for each Week.
+<br><br><br><br><br><br>
+
+:::
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+
+
+
+<br>
+
+
+
+::: panel-tabset
+### Online Lecture Engagement: Plot
+
+
+```{r}
+#| include: false
+
+
+week_1 <- df[which(df$Module == "Week 1"),]
+week_3 <- df[which(df$Module == "Week 3"),]
+week_4 <- df[which(df$Module == "Week4"),]
+week_5 <- df[which(df$Module == "Week 5"),]
+week_6 <- df[which(df$Module == "Week 6"),]
+week_7 <- df[which(df$Module == "Week 7"),]
+week_10 <- df[which(df$Module == "Week 10"),]
+week_11 <- df[which(df$Module == "Week 11"),]
+
+
+
+
+
+at_home_lab_3 <- df[which(df$Module == "At Home Lab 3"),]
+at_home_lab_4 <- df[which(df$Module == "At Home Lab 4"),]
+at_home_lab_5 <- df[which(df$Module == "At Home Lab 5"),]
+at_home_lab_6 <- df[which(df$Module == "At Home Lab 6"),]
+at_home_lab_7 <- df[which(df$Module == "At Home Lab 7"),]
+at_home_lab_8 <- df[which(df$Module == "At Home Lab 8"),]
+
+
+
+
+lectures <- c(
+  paste(round(mean(week_1$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_3$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_4$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_5$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_6$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_7$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_10$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_11$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+)
+
+
+lectures2 <- c(
+   mean(week_1$percentage,na.rm = T)
+  ,mean(week_3$percentage,na.rm = T)
+  ,mean(week_4$percentage,na.rm = T)
+  ,mean(week_5$percentage,na.rm = T)
+  ,mean(week_6$percentage,na.rm = T)
+  ,mean(week_7$percentage,na.rm = T)
+  ,mean(week_10$percentage,na.rm = T)
+  ,mean(week_11$percentage,na.rm = T)
+)
+
+df_lec <- 
+  rbind(
+     week_1
+    ,week_3
+    ,week_4
+    ,week_5
+    ,week_6
+    ,week_7
+    ,week_10
+    ,week_11
+  )
+
+
+
+
+
+
+heading1 <- c(
+   "1Week 1"
+  ,"2Week 3"
+  ,"3Week 4"
+  ,"4Week 5"
+  ,"5Week 6"
+  ,"6Week 7"
+  ,"7Week 10"
+  ,"8Week 11")
+
+
+heading2 <- c(
+  "Week 1"
+  ,"Week 3"
+  ,"Week 4"
+  ,"Week 5"
+  ,"Week 6"
+  ,"Week 7"
+  ,"Week 10"
+  ,"Week 11")
+
+
+
+labtype <- c(rep("1In Person",8),rep("2At Home",8))
+labnumber <- c(heading1,heading1)
+#stats1 <- c(in_person1,at_home1)
+lec_type <- rep("lecture",8)
+
+
+df_lecs1 <- cbind.data.frame(heading1,lectures2,lec_type)
+
+
+stats <- rbind(heading2,lectures)
+
+rownames(stats)<-NULL
+
+```
+
+
+```{r}
+#| label: fig-lecture
+#| include: true
+#| fig-cap-location: "top"
+#| fig-cap: Lecture Engagement Statistics
+
+ggplot(df_lecs1, aes(heading1, lectures2,
+                     fill = lec_type
+                     )) +
+  scale_y_continuous(limits = c(-.03,1),
+                     labels = percent_format()
+  )+
+  geom_col(position = "dodge")+
+  xlab("Lab Number") +
+  ylab("Percentage of Class Accessed Online")+
+  scale_x_discrete(labels=c(
+   "Week 1"
+  ,"Week 3"
+  ,"Week 4"
+  ,"Week 5"
+  ,"Week 6"
+  ,"Week 7"
+  ,"Week 10"
+  ,"Week 11")) +
+  scale_fill_manual(values = c("#00B140"))+
+  #scale_fill_grey(start = .5, end = .8) +
+  #labs(fill="Lab Type")+
+  theme_bw() +
+  theme(plot.title=element_text(#amily="Times",
+                                size=12
+                                ),
+        legend.text=element_text(#family="Times",
+                                 size=8
+                                 ),
+          legend.title=element_text(#family="Times",
+                                    size=10
+                                    ),
+          axis.text=element_text(#family="Times",
+                                 colour = "black",
+                                 size=10
+                                 ),
+          axis.ticks.x = element_blank(),
+          axis.title=element_text(#family="Times",
+                                  size=12
+                                  ),
+          strip.text=element_text(#family = "Times",
+                                  size = 12
+                                  ),
+          strip.background = element_rect(fill = "white"),
+          legend.position="none")
+
+```
+
+### Online Lecture Engagement: Table
+
+
+```{r}
+#| label: tbl-lecture
+#| include: true
+#| tbl-cap-location: "bottom"
+#| tbl-cap: Lecture Engagement Statistics
+
+knitr::kable(stats)
+
+```
+
+Percentage of the class that has engaged with the online content for each Lecture.
+<br><br><br><br><br><br><br>
+
+:::
+
+
+- Overall engagement was good   
+- More evaluation...
+
+
+
+![](resources/images/navigating/Slide9.png "SET"){height="500"}
+
+
+![](resources/images/navigating/Slide10.png "SET"){height="500"}
+
+
+## A Picture Stack
+
+
+::: {.r-stack}
+![](resources/images/20181101_080705.jpg){.fragment height="300"}
+
+![](resources/images/20200808_153728.jpg){.fragment height="450"}
+
+![](resources/images/navigating1.png){.fragment height="400"}
+:::
+
+## Reflection{#sec-reflection}
+
+## Lightbox test
+
+## References{#sec-references .scrollable .smaller}
+
+
+

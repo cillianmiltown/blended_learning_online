@@ -1,0 +1,53 @@
+/*-- scss:defaults --*/
+
+.reveal .controls {
+	color: var(#005335);
+}
+
+
+
+.reveal .progress {
+	background: rgba(0,0,0,0.2);
+	color: rgba(0,83,53);
+}
+
+$link-color: #00B140 !default;
+
+$headingColor: #005335 !default;
+
+
+$h1-font-color: #005335; 
+$h2-font-color: #005335;
+$h3-font-color: #005335;
+
+.title {
+  color: #005335;
+}
+
+.subtitle{
+  font-size: 55px;
+  font-style: bold;
+  color: #005335;
+}
+
+.level1 {
+  color: #005335;
+}
+
+
+#title-block-header {
+  margin-top: 50px;
+  margin-bottom: 150px;
+  height: 100%;
+  background-position-y: bottom;
+}
+
+.quarto-title-banner {
+  position: relative;
+  height: 100%;
+  margin-bottom: 150px;
+}
+
+.reveal .slide.scrollable {
+      overflow-y: auto;
+    }

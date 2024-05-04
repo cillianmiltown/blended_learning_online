@@ -1,0 +1,154 @@
+---
+title: "Blended Learning in PS4033:<br>Research Methods in Psychology"
+subtitle: "A Case Study"
+author: "Cillian McHugh"
+title-block-banner: resources/images/banner2.jpg
+date: 2024-04-22
+date-format: full
+format:
+  html:
+    toc: true
+    toc-location: left
+    theme: "resources/css/mytheme.scss"
+    anchor-sections: true
+    navbar:
+    background: primary
+    search: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+# Introduction
+
+# Background
+
+# Design
+
+# Implementation
+
+# Evaluation
+
+# Reflection
+
+# References
+
+
+```{r}
+#| echo: false
+#| include: false
+#| code-fold: 'show'
+#| code-summary: "Show the code"
+
+df <- read.csv("PS4033 - RESEARCH METHODS 20234 SEM2_StatisticsExport_2024-04-22T110444.csv")
+
+discussion <- read.csv("ExportedData_2024-04-22T122347.csv")
+
+
+df$percentage <- 
+  df$UsersVisited/97
+
+mean(df$percentage,na.rm = T)
+
+table(df$Module)
+
+
+
+at_home_lab_1 <- df[which(df$Module == "At Home Lab 1"),]
+at_home_lab_2 <- df[which(df$Module == "At Home Lab 2"),]
+at_home_lab_3 <- df[which(df$Module == "At Home Lab 3"),]
+at_home_lab_4 <- df[which(df$Module == "At Home Lab 4"),]
+at_home_lab_5 <- df[which(df$Module == "At Home Lab 5"),]
+at_home_lab_6 <- df[which(df$Module == "At Home Lab 6"),]
+at_home_lab_7 <- df[which(df$Module == "At Home Lab 7"),]
+at_home_lab_8 <- df[which(df$Module == "At Home Lab 8"),]
+
+
+lab_1 <- df[which(df$Module == "Lab 1"),]
+lab_2 <- df[which(df$Module == "Lab 2"),]
+lab_3 <- df[which(df$Module == "Lab 3"),]
+lab_4 <- df[which(df$Module == "Lab 4"),]
+lab_5 <- df[which(df$Module == "Lab 5"),]
+lab_6 <- df[which(df$Module == "Lab 6"),]
+lab_7 <- df[which(df$Module == "Lab 7"),]
+lab_8 <- df[which(df$Module == "Lab 8"),]
+
+
+
+mean(at_home_lab_1$percentage,na.rm = T)
+mean(at_home_lab_2$percentage,na.rm = T)
+mean(at_home_lab_3$percentage,na.rm = T)
+mean(at_home_lab_4$percentage,na.rm = T)
+mean(at_home_lab_5$percentage,na.rm = T)
+mean(at_home_lab_6$percentage,na.rm = T)
+mean(at_home_lab_7$percentage,na.rm = T)
+mean(at_home_lab_8$percentage,na.rm = T)
+
+
+
+
+mean(lab_1$percentage,na.rm = T)
+mean(lab_2$percentage,na.rm = T)
+mean(lab_3$percentage,na.rm = T)
+mean(lab_4$percentage,na.rm = T)
+mean(lab_5$percentage,na.rm = T)
+mean(lab_6$percentage,na.rm = T)
+mean(lab_7$percentage,na.rm = T)
+mean(lab_8$percentage,na.rm = T)
+
+
+sum(discussion$X.Read..including.own..==0)/97
+
+table(discussion$X.Threads.)
+
+sum(discussion$X.Threads. !=0)
+sum(discussion$X.Threads. !=0)/97
+
+heading <- c(""
+  ,"Lab 1"
+  ,"Lab 2"
+  ,"Lab 3"
+  ,"Lab 4"
+  ,"Lab 5"
+  ,"Lab 6"
+  ,"Lab 7"
+  ,"Lab 8")
+
+in_person <- c(
+  "In Person Labs"
+  ,paste(round(mean(lab_1$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_2$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_3$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_4$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_5$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_6$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_7$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(lab_8$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+)
+
+at_home <- c(
+  "At Home Labs"
+  ,paste(round(mean(at_home_lab_1$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_2$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_3$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_4$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_5$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_6$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_7$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(at_home_lab_8$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+)
+
+rbind(heading,in_person,at_home)
+
+
+
+```
+
+
+
+<br><br><br><br><br><br><br><br><br>
+
+<footer>
+
+<font color=#005335>Cillian McHugh 0858994</font color> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="resources/images/ul-psychology-logos.png" alt="UL Psychology" height="60">
+  </footer>
