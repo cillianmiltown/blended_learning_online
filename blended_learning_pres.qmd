@@ -2,8 +2,8 @@
 title: "PS4033 Case Study"
 subtitle: "Blended Learning in PS4033: Research Methods in Psychology"
 author: "Dr Cillian McHugh"
-institute: "Department of Psychology"
-date: 2024-04-22
+institute: "Department of Psychology<br>(1,917 words)"
+date: 2024-05-05
 date-format: full
 bibliography: "resources/bib/My Library.bib"
 csl: apa.csl
@@ -65,6 +65,9 @@ library(scales)
 ![](resources/images/navigating/Slide5.png "navigation"){height="400"}
 
 Additionally, clicking `Esc` will expand the view to all sections
+
+![](resources/images/esc.png "SET"){.lightbox height="500"}
+
 
 
 ## Introduction{#sec-introduction .scrollable .smaller}
@@ -332,9 +335,13 @@ The proposed learning outcomes span a range of levels of Bloom’s taxonomy of l
 
 
 
-
+- See video below for a live demo of the VLE for this module
 
 <video width="600" height="400" src="https://d2hpwsdp0ihr0w.cloudfront.net/sessions/3f7b12f3-2f29-4891-8690-b10a00cf2f5e/6313e0dc-ebc0-4b57-846b-b10a00cf2f67-2907e3a6-15e8-46ff-836a-b10a00d17ffe.mp4?invocationId=bf425844-e106-ef11-82af-023c18b7dbd3" controls></video>
+
+
+<br><br>
+
 
 ### Content Layout [(Click here to return)](#sec-implementation) {.scrollable}
 
@@ -370,11 +377,13 @@ The proposed learning outcomes span a range of levels of Bloom’s taxonomy of l
 
 ## Evaluation{#sec-evaluation .smaller .scrollable}
 
+- The effectiveness of the blended learning approach can be examined using two indicators.
+  1. Engagement data provided by Brightspace
+  2. Students' responses to the Student Evaluation of Teaching (SET).
+- Over the course of the semester attendance at the in-person lectures waned, with average attendance at less than 30 (out of 128 - 23%). This is not surprising, given the recorded lecture is available online.
+- The online engagement with the recording and the other lecture material remained relatively stable at 60% or higher most weeks see @fig-lecture and @tbl-lecture for week on week stats.
 
 
-
-- Overall engagement was good   
-- More evaluation...
 
 
 
@@ -486,7 +495,7 @@ stats <- rbind(heading,in_person,at_home)
 
 rownames(stats)<-NULL
 
-stats
+stats_labs <- stats
 
 
 ```
@@ -494,6 +503,201 @@ stats
 
 
 
+
+
+<br>
+
+
+(Toggle between Plot and Table by clicking the relevant tab)
+
+::: panel-tabset
+### Online Lecture Engagement: Plot
+
+
+```{r}
+#| include: false
+
+
+week_1 <- df[which(df$Module == "Week 1"),]
+week_3 <- df[which(df$Module == "Week 3"),]
+week_4 <- df[which(df$Module == "Week4"),]
+week_5 <- df[which(df$Module == "Week 5"),]
+week_6 <- df[which(df$Module == "Week 6"),]
+week_7 <- df[which(df$Module == "Week 7"),]
+week_10 <- df[which(df$Module == "Week 10"),]
+week_11 <- df[which(df$Module == "Week 11"),]
+
+
+
+
+
+at_home_lab_3 <- df[which(df$Module == "At Home Lab 3"),]
+at_home_lab_4 <- df[which(df$Module == "At Home Lab 4"),]
+at_home_lab_5 <- df[which(df$Module == "At Home Lab 5"),]
+at_home_lab_6 <- df[which(df$Module == "At Home Lab 6"),]
+at_home_lab_7 <- df[which(df$Module == "At Home Lab 7"),]
+at_home_lab_8 <- df[which(df$Module == "At Home Lab 8"),]
+
+
+
+
+lectures <- c(
+  paste(round(mean(week_1$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_3$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_4$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_5$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_6$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_7$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_10$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+  ,paste(round(mean(week_11$percentage,na.rm = T)*100,digits=0),"%", sep = "")
+)
+
+
+lectures2 <- c(
+   mean(week_1$percentage,na.rm = T)
+  ,mean(week_3$percentage,na.rm = T)
+  ,mean(week_4$percentage,na.rm = T)
+  ,mean(week_5$percentage,na.rm = T)
+  ,mean(week_6$percentage,na.rm = T)
+  ,mean(week_7$percentage,na.rm = T)
+  ,mean(week_10$percentage,na.rm = T)
+  ,mean(week_11$percentage,na.rm = T)
+)
+
+df_lec <- 
+  rbind(
+     week_1
+    ,week_3
+    ,week_4
+    ,week_5
+    ,week_6
+    ,week_7
+    ,week_10
+    ,week_11
+  )
+
+
+
+
+
+
+heading1 <- c(
+   "1Week 1"
+  ,"2Week 3"
+  ,"3Week 4"
+  ,"4Week 5"
+  ,"5Week 6"
+  ,"6Week 7"
+  ,"7Week 10"
+  ,"8Week 11")
+
+
+heading2 <- c(
+  "Week 1"
+  ,"Week 3"
+  ,"Week 4"
+  ,"Week 5"
+  ,"Week 6"
+  ,"Week 7"
+  ,"Week 10"
+  ,"Week 11")
+
+
+
+labtype <- c(rep("1In Person",8),rep("2At Home",8))
+labnumber <- c(heading1,heading1)
+#stats1 <- c(in_person1,at_home1)
+lec_type <- rep("lecture",8)
+
+
+df_lecs1 <- cbind.data.frame(heading1,lectures2,lec_type)
+
+
+stats <- rbind(heading2,lectures)
+
+rownames(stats)<-NULL
+
+```
+
+
+```{r}
+#| label: fig-lecture
+#| include: true
+#| fig-cap-location: "top"
+#| fig-cap: Lecture Engagement Statistics
+
+ggplot(df_lecs1, aes(heading1, lectures2,
+                     fill = lec_type
+                     )) +
+  scale_y_continuous(limits = c(-.03,1),
+                     labels = percent_format()
+  )+
+  geom_col(position = "dodge")+
+  xlab("Lecture Week") +
+  ylab("Percentage of Class Accessed Online")+
+  scale_x_discrete(labels=c(
+   "Week 1"
+  ,"Week 3"
+  ,"Week 4"
+  ,"Week 5"
+  ,"Week 6"
+  ,"Week 7"
+  ,"Week 10"
+  ,"Week 11")) +
+  scale_fill_manual(values = c("#00B140"))+
+  #scale_fill_grey(start = .5, end = .8) +
+  #labs(fill="Lab Type")+
+  theme_bw() +
+  theme(plot.title=element_text(#amily="Times",
+                                size=12
+                                ),
+        legend.text=element_text(#family="Times",
+                                 size=8
+                                 ),
+          legend.title=element_text(#family="Times",
+                                    size=10
+                                    ),
+          axis.text=element_text(#family="Times",
+                                 colour = "black",
+                                 size=10
+                                 ),
+          axis.ticks.x = element_blank(),
+          axis.title=element_text(#family="Times",
+                                  size=12
+                                  ),
+          strip.text=element_text(#family = "Times",
+                                  size = 12
+                                  ),
+          strip.background = element_rect(fill = "white"),
+          legend.position="none")
+
+```
+
+### Online Lecture Engagement: Table
+
+
+```{r}
+#| label: tbl-lecture
+#| include: true
+#| tbl-cap-location: "bottom"
+#| tbl-cap: Lecture Engagement Statistics
+
+knitr::kable(stats)
+
+```
+
+Percentage of the class that has engaged with the online content for each Lecture.
+<br><br><br><br><br><br><br>
+
+:::
+
+
+- Similarly, the online engagement with the lab material is quite strong. At the time of collecting these data, the students still had two weeks before the deadline for submission of all the lab work.
+  - For the "in person" labs, there was over 90% engagement for the first 4 weeks, with some decline for the remainder of the semester, but remaining at 70% or higher.
+  - For the at home labs, the first 4 weeks show greater than 85% of the class engaging with the online materials, with some decline in the second half of the semester.
+
+
+(Toggle between Plot and Table by clicking the relevant tab)
 
 ::: panel-tabset
 ### Lab Engagement: Plot
@@ -656,7 +860,7 @@ ggplot(df_labs1, aes(labnumber, stats1, fill = factor(labtype,labels=c("In Perso
 #| tbl-cap-location: "bottom"
 #| tbl-cap: Lab Engagement Statistics
 
-knitr::kable(stats)
+knitr::kable(stats_labs)
 
 ```
 
@@ -666,231 +870,39 @@ Percentage of the class that has engaged with the online content for each of the
 :::
 
 
-:::: {.columns}
+- The Student Evaluation of Teaching for this module also contains useful data for evaluating the blended approach adopted.
+- On the Lecturer items, the item "*My teacher makes good use of Brightspace, or an alternative virtual learning environment and makes appropriate use of technology in his/her teaching*" scored 5/5 (see below)
 
-::: {.column width="40%"}
-Left column
-:::
 
-::: {.column width="60%"}
-Right column
-:::
 
-::::
 
+![](resources/images/navigating/Slide9.png "SET"){.lightbox height="500"}
 
+- Similarly in the Module items, the item "*The online tools used are appropriate*" also scored 5/5 (see below).
 
-<br>
 
+![](resources/images/navigating/Slide10.png "SET"){.lightbox height="500"}
 
 
-::: panel-tabset
-### Online Lecture Engagement: Plot
 
+- These indicators suggest that:
+  (a) Students are engaging with the online components of the module, and
+  (b) Students find the online components useful/effective/appropriate
+  
 
-```{r}
-#| include: false
+<br><br><br>
 
 
-week_1 <- df[which(df$Module == "Week 1"),]
-week_3 <- df[which(df$Module == "Week 3"),]
-week_4 <- df[which(df$Module == "Week4"),]
-week_5 <- df[which(df$Module == "Week 5"),]
-week_6 <- df[which(df$Module == "Week 6"),]
-week_7 <- df[which(df$Module == "Week 7"),]
-week_10 <- df[which(df$Module == "Week 10"),]
-week_11 <- df[which(df$Module == "Week 11"),]
+## Reflection{#sec-reflection .scrollable .smaller}
 
+- Overall, I am satisfied with the current blended approach for PS4033 Research Methods in Psychology. It is positive to see that students are engaging with the blended components, and the feedback from students is also very encouraging. 
+- Despite the current set up working well, there are further changes I would like to implement in the future.
+- One key change I made to the module this year was the introduction of the pre-registration part of the assignment. There is scope to build on this in conjunction with the introduction of more programming/code based statistical software packages (e.g., R or Python).
+  - I do have a plan to introduce alternative statistical software packages in the future, though this will need to be done incrementally (to keep my workload manageable, and to avoid overwhelming the students - this year I re-recorded all the SPSS instruction videos).
+  - By introducing code based statistical packages, students will be able to pre-register their analysis using the sample dataset, before gaining access to the main dataset.
+- Another change I would like to make is to make better use of the discussion forums. These were useful for addressing students questions directly, however in future, I would like to see students interacting with each other on the discussion forums.
 
 
-
-
-at_home_lab_3 <- df[which(df$Module == "At Home Lab 3"),]
-at_home_lab_4 <- df[which(df$Module == "At Home Lab 4"),]
-at_home_lab_5 <- df[which(df$Module == "At Home Lab 5"),]
-at_home_lab_6 <- df[which(df$Module == "At Home Lab 6"),]
-at_home_lab_7 <- df[which(df$Module == "At Home Lab 7"),]
-at_home_lab_8 <- df[which(df$Module == "At Home Lab 8"),]
-
-
-
-
-lectures <- c(
-  paste(round(mean(week_1$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-  ,paste(round(mean(week_3$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-  ,paste(round(mean(week_4$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-  ,paste(round(mean(week_5$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-  ,paste(round(mean(week_6$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-  ,paste(round(mean(week_7$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-  ,paste(round(mean(week_10$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-  ,paste(round(mean(week_11$percentage,na.rm = T)*100,digits=0),"%", sep = "")
-)
-
-
-lectures2 <- c(
-   mean(week_1$percentage,na.rm = T)
-  ,mean(week_3$percentage,na.rm = T)
-  ,mean(week_4$percentage,na.rm = T)
-  ,mean(week_5$percentage,na.rm = T)
-  ,mean(week_6$percentage,na.rm = T)
-  ,mean(week_7$percentage,na.rm = T)
-  ,mean(week_10$percentage,na.rm = T)
-  ,mean(week_11$percentage,na.rm = T)
-)
-
-df_lec <- 
-  rbind(
-     week_1
-    ,week_3
-    ,week_4
-    ,week_5
-    ,week_6
-    ,week_7
-    ,week_10
-    ,week_11
-  )
-
-
-
-
-
-
-heading1 <- c(
-   "1Week 1"
-  ,"2Week 3"
-  ,"3Week 4"
-  ,"4Week 5"
-  ,"5Week 6"
-  ,"6Week 7"
-  ,"7Week 10"
-  ,"8Week 11")
-
-
-heading2 <- c(
-  "Week 1"
-  ,"Week 3"
-  ,"Week 4"
-  ,"Week 5"
-  ,"Week 6"
-  ,"Week 7"
-  ,"Week 10"
-  ,"Week 11")
-
-
-
-labtype <- c(rep("1In Person",8),rep("2At Home",8))
-labnumber <- c(heading1,heading1)
-#stats1 <- c(in_person1,at_home1)
-lec_type <- rep("lecture",8)
-
-
-df_lecs1 <- cbind.data.frame(heading1,lectures2,lec_type)
-
-
-stats <- rbind(heading2,lectures)
-
-rownames(stats)<-NULL
-
-```
-
-
-```{r}
-#| label: fig-lecture
-#| include: true
-#| fig-cap-location: "top"
-#| fig-cap: Lecture Engagement Statistics
-
-ggplot(df_lecs1, aes(heading1, lectures2,
-                     fill = lec_type
-                     )) +
-  scale_y_continuous(limits = c(-.03,1),
-                     labels = percent_format()
-  )+
-  geom_col(position = "dodge")+
-  xlab("Lab Number") +
-  ylab("Percentage of Class Accessed Online")+
-  scale_x_discrete(labels=c(
-   "Week 1"
-  ,"Week 3"
-  ,"Week 4"
-  ,"Week 5"
-  ,"Week 6"
-  ,"Week 7"
-  ,"Week 10"
-  ,"Week 11")) +
-  scale_fill_manual(values = c("#00B140"))+
-  #scale_fill_grey(start = .5, end = .8) +
-  #labs(fill="Lab Type")+
-  theme_bw() +
-  theme(plot.title=element_text(#amily="Times",
-                                size=12
-                                ),
-        legend.text=element_text(#family="Times",
-                                 size=8
-                                 ),
-          legend.title=element_text(#family="Times",
-                                    size=10
-                                    ),
-          axis.text=element_text(#family="Times",
-                                 colour = "black",
-                                 size=10
-                                 ),
-          axis.ticks.x = element_blank(),
-          axis.title=element_text(#family="Times",
-                                  size=12
-                                  ),
-          strip.text=element_text(#family = "Times",
-                                  size = 12
-                                  ),
-          strip.background = element_rect(fill = "white"),
-          legend.position="none")
-
-```
-
-### Online Lecture Engagement: Table
-
-
-```{r}
-#| label: tbl-lecture
-#| include: true
-#| tbl-cap-location: "bottom"
-#| tbl-cap: Lecture Engagement Statistics
-
-knitr::kable(stats)
-
-```
-
-Percentage of the class that has engaged with the online content for each Lecture.
-<br><br><br><br><br><br><br>
-
-:::
-
-
-- Overall engagement was good   
-- More evaluation...
-
-
-
-![](resources/images/navigating/Slide9.png "SET"){height="500"}
-
-
-![](resources/images/navigating/Slide10.png "SET"){height="500"}
-
-
-## A Picture Stack
-
-
-::: {.r-stack}
-![](resources/images/20181101_080705.jpg){.fragment height="300"}
-
-![](resources/images/20200808_153728.jpg){.fragment height="450"}
-
-![](resources/images/navigating1.png){.fragment height="400"}
-:::
-
-## Reflection{#sec-reflection}
-
-## Lightbox test
 
 ## References{#sec-references .scrollable .smaller}
 
